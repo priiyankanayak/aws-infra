@@ -1,34 +1,38 @@
-name: Terraform Workflow
+name: "Terraform"
+
 on:
   push:
-    branches: [ main ]
+    branches: ["main"]
   pull_request:
-    branches: [ main ]
+    branches: ["main"]
+
+permissions:
+  contents: read
 
 jobs:
-  format:
+  terraform:
+    name: "Terraform"
     runs-on: ubuntu-latest
+    
+
+    
+    defaults:
+      run:
+        shell: bash
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
 
-      - name: Format Terraform code
-        run: terraform fmt -check
+      - name: Checkout
+        uses: actions/checkout@v3
 
-  plan:
-    needs: format
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install Terraform
+      
+      - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
 
-      - name: Run Terraform plan
-        run: |
-          terraform init
-          terraform plan
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AKIAUMUZG4G6ZW267O5I }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.GofMlw5xoB+5WhTynXnOdW5SG1D2zFaKO/Oh/lRF }}
+      
+      - name: Terraform Init
+        run: terraform init
+
+      
+      - name: Terraform Format
+        run: terraform fmt
