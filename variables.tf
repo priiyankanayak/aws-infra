@@ -54,3 +54,7 @@ variable "MyPSubnet3_cidr_block" {
 #     type = list (string)
 # }
 
+variable "RouteInternetgateway" {
+    default = "0.0.0.0/0"
+    type = string
+}
