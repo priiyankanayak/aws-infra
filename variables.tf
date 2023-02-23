@@ -58,3 +58,21 @@ variable "RouteInternetgateway" {
   default = "0.0.0.0/0"
   type    = string
 }
+
+variable "instance_type" {
+  default = "t2.micro"
+  type    = string
+}
+variable "volume_size" {
+  default = 50
+  type    = number
+}
+variable "volume_type" {
+  default = "gp2"
+  type    = string
+}
+variable "owner_id" {
+  type    = list(string)
+  default = ["302042767805"]
+
+}
