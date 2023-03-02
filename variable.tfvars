@@ -17,3 +17,19 @@ owner_id      = ["302042767805"]
 instance_type = "t2.micro"
 volume_size   = 50
 volume_type   = "gp2"
+
+allocated_storage = 10
+# db_name = csye6225
+engine = "mysql"
+engine_version = "5.7"
+identifier = "csye6225"
+instance_class = "db.t3.micro"
+# username = "csye6225"
+# password = "SomePassword!2022"
+storage_type = "gp2"
+storage_encrypted = true
+skip_final_snapshot = true
+
+s3_bucket_prefix = "s3-csye-6225-"
+
+port = 3306
