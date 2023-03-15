@@ -1,4 +1,4 @@
-profile = "dev"
+profile = "demo"
 region  = "us-east-1"
 
 
@@ -25,7 +25,7 @@ engine_version = "5.7"
 identifier = "csye6225"
 instance_class = "db.t3.micro"
 # username = "csye6225"
-# password = "SomePassword!2022"
+password = "SomePassword!2022"
 storage_type = "gp2"
 storage_encrypted = true
 skip_final_snapshot = true
@@ -36,6 +36,6 @@ port = 3306
 
 
 #route
-route_record="dev.priyankanayak.me"
+route_record="prod.priyankanayak.me"
 
-# route_zoneid = "Z08583632WI7IWX40IP9K"
+# route_zoneid = "Z0886500210OW3VRC3J31"

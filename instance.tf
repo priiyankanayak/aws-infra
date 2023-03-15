@@ -36,8 +36,7 @@ resource "aws_instance" "instance_app" {
   echo MYSQL_USERNAME="${aws_db_instance.mysql_database.username}" >> .env
   echo MYSQL_ROOT_PASSWORD="${aws_db_instance.mysql_database.password}" >> .env
   echo MYSQL_HOST="${aws_db_instance.mysql_database.address}" >> .env
-  echo AWS_ACCESS_KEY_ID="AKIAUMUZG4G6ZW267O5I" >> .env
-  echo AWS_SECRET_ACCESS_KEY="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" >> .env
+
   echo PORT="3000" >> .env
 
   echo AWS_S3_BUCKET_NAME="${aws_s3_bucket.s3_bucket.bucket}" >> .env
