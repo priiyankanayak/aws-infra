@@ -116,7 +116,7 @@ variable "username" {
 
 variable "password" {
   type = string
-  default = "SomePassword!2022"
+  # default = "SomePassword!2022"
 }
 
 variable "storage_type" {
@@ -143,3 +143,15 @@ variable "port" {
   default = 3306
   
 }
+
+variable "route_record" {
+  type = string
+  default = "dev.priyankanayak.me"
+  
+}
+
+# variable "route_zoneid" {
+#   type = string
+#   default = "Z08583632WI7IWX40IP9K"
+  
+# }
