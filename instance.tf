@@ -12,6 +12,7 @@ resource "aws_instance" "instance_app" {
   ]
 
   ami           = data.aws_ami.ami_new.id
+  # ami = "ami-09380f337ebc547d9"
   instance_type = var.instance_type
 
   root_block_device {
@@ -40,8 +41,15 @@ resource "aws_instance" "instance_app" {
   echo PORT="3000" >> .env
 
   echo AWS_S3_BUCKET_NAME="${aws_s3_bucket.s3_bucket.bucket}" >> .env
-  echo AWS_BUCKET_REGION="us-east-1" >> .env
+  # echo NODE_ENV= "production" >> .env
  
+
+  sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl \
+      -a fetch-config \
+      -m ec2 \
+      -c file:/home/ec2-user/cloudwatch.json \
+      -s
+
 
   sudo systemctl daemon-reload
   sudo systemctl enable nginx
