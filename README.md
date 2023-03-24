@@ -12,7 +12,7 @@
 - If the installation was successful, please get the security information from AWS IAM. You may create a profile by utilizing
   - `aws configure --profile <profile-name>`
 
-## Terraform
+## Terraform:
 
 - Terraform is the IaaC tool offered by Hashicorp. Kindly visit [Terraform](https://www.terraform.io/) for details
 - Download and install the [Terraform CLI](https://developer.hashicorp.com/terraform/downloads?product_intent=terraform)
@@ -24,7 +24,7 @@
 - Clone the repository
 - Initialize the Terraform repo using the following command
   - `terraform init`
-- In this repo, I've given the default region and default profile as "us-east-1" and "dev", if you want to give other values, make sure you create and initialize the variables inside the *.tfvars* file
+- In this repo, I've given the default region and default profile as "us-east-1" and "dev", if you want to give other values, make sure you create and initialize the variables inside the _.tfvars_ file
 - In order to see if there are any syntax errors and observe which services will be added, run the following command
   - `terraform plan`
 - Now, in order to implement them to AWS, please run the following command
