@@ -78,39 +78,39 @@ variable "owner_id" {
 }
 
 variable "allocated_storage" {
-  type = number
+  type    = number
   default = 10
-  
+
 }
 
 variable "db_name" {
-  type=string
+  type    = string
   default = "csye6225"
-  
+
 }
 
 variable "engine" {
-  type = string
-  default = "mysql"  
+  type    = string
+  default = "mysql"
 }
 
 variable "engine_version" {
-  type = string
-  default = "5.7" 
+  type    = string
+  default = "5.7"
 }
 
 variable "identifier" {
-  type = string
+  type    = string
   default = "csye6225"
 }
 
 variable "instance_class" {
-  type = string
+  type    = string
   default = "db.t3.micro"
 }
 
 variable "username" {
-  type = string
+  type    = string
   default = "csye6225"
 }
 
@@ -120,38 +120,38 @@ variable "password" {
 }
 
 variable "storage_type" {
-  type = string
+  type    = string
   default = "gp2"
 }
 variable "storage_encrypted" {
-  type = bool
+  type    = bool
   default = true
 }
 
 variable "skip_final_snapshot" {
-  type = bool
+  type    = bool
   default = true
 }
 
 variable "s3_bucket_prefix" {
-  type = string
+  type    = string
   default = "s3-csye-6225-"
 }
 
 variable "port" {
-  type = number
+  type    = number
   default = 3306
-  
+
 }
 
 variable "route_record" {
-  type = string
+  type    = string
   default = "dev.priyankanayak.me"
-  
+
 }
 
 # variable "route_zoneid" {
 #   type = string
 #   default = "Z08583632WI7IWX40IP9K"
-  
+
 # }

@@ -10,18 +10,22 @@
 # }
 
 data "aws_route53_zone" "selected" {
-  name         = var.route_record
+  name = var.route_record
   # private_zone = true
 }
 
 resource "aws_route53_record" "route_record" {
-    depends_on = [
-      aws_instance.instance_app
-    ]
-    name = var.route_record
-    zone_id = data.aws_route53_zone.selected.zone_id
-    # zone_id = var.route53_zone_id
-    type = "A"
-    ttl = 60
-    records = [aws_instance.instance_app.public_ip]
+  # depends_on = [
+  #   aws_instance.instance_app
+  # ]
+  name    = var.route_record
+  zone_id = data.aws_route53_zone.selected.zone_id
+  # zone_id = var.route53_zone_id
+  type = "A"
+
+  alias {
+    name                   = aws_lb.loadbalancer_app.dns_name
+    zone_id                = aws_lb.loadbalancer_app.zone_id
+    evaluate_target_health = true
+  }
 }
