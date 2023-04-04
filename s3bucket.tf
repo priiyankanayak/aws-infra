@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "s3_bucket" {
   # bucket = "priyankanayakbucket"
   bucket_prefix = var.s3_bucket_prefix
 
-   force_destroy = true
+  force_destroy = true
 
   # server_side_encryption_configuration {
   #   rule {

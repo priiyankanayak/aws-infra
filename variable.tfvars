@@ -20,14 +20,14 @@ volume_type   = "gp2"
 
 allocated_storage = 10
 # db_name = csye6225
-engine = "mysql"
+engine         = "mysql"
 engine_version = "5.7"
-identifier = "csye6225"
+identifier     = "csye6225"
 instance_class = "db.t3.micro"
 # username = "csye6225"
-password = "SomePassword!2022"
-storage_type = "gp2"
-storage_encrypted = true
+password            = "SomePassword!2022"
+storage_type        = "gp2"
+storage_encrypted   = true
 skip_final_snapshot = true
 
 s3_bucket_prefix = "s3-csye-6225-"
@@ -36,6 +36,6 @@ port = 3306
 
 
 #route
-route_record="dev.priyankanayak.me"
+route_record = "dev.priyankanayak.me"
 
 # route_zoneid = "Z08583632WI7IWX40IP9K"
