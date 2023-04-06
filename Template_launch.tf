@@ -7,7 +7,7 @@ resource "aws_launch_template" "template_launch" {
     device_name = "/dev/sdf"
 
     ebs {
-      volume_size = 20
+      volume_size = var.volume_sizetl
     }
 
   }
