@@ -50,8 +50,10 @@ resource "aws_autoscaling_policy" "asg_policy" {
     }
     target_value = 5.0
   }
+  
 
 }
+
 
 resource "aws_autoscaling_attachment" "asg_attachment_bar" {
   autoscaling_group_name = aws_autoscaling_group.autoS-group.id
