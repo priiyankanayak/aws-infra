@@ -39,3 +39,11 @@ port = 3306
 route_record = "dev.priyankanayak.me"
 
 # route_zoneid = "Z08583632WI7IWX40IP9K"
+
+volume_sizetl    = 20
+max_sizeasg      = 3
+min_sizeasg      = 1
+desired_capacity = 1
+cooldown         = 60
+threshold_up     = 5
+threshold_down   = 3

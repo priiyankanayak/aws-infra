@@ -14,11 +14,11 @@ resource "aws_security_group" "security_grp" {
 
   ingress {
     # cidr_blocks     = ["0.0.0.0/0"]
-    description     = "HTTP open"
-    from_port       = 80
-    protocol        = "tcp"
-    to_port         = 80
-  
+    description = "HTTP open"
+    from_port   = 80
+    protocol    = "tcp"
+    to_port     = 80
+
     security_groups = [aws_security_group.loadbalncer_security.id]
   }
 

@@ -155,3 +155,38 @@ variable "route_record" {
 #   default = "Z08583632WI7IWX40IP9K"
 
 # }
+
+variable "volume_sizetl" {
+  type    = number
+  default = 20
+}
+
+variable "max_sizeasg" {
+  type    = number
+  default = 3
+}
+
+variable "min_sizeasg" {
+  type    = number
+  default = 1
+}
+
+variable "desired_capacity" {
+  type    = number
+  default = 1
+}
+
+variable "cooldown" {
+  type    = number
+  default = 60
+}
+
+variable "threshold_up" {
+  type    = number
+  default = 5
+}
+
+variable "threshold_down" {
+  type    = number
+  default = 3
+}
