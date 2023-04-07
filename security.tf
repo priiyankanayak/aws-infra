@@ -4,12 +4,12 @@ resource "aws_security_group" "security_grp" {
   vpc_id      = aws_vpc.main.id
 
   ingress {
-    # cidr_blocks     = ["0.0.0.0/0"]
+    cidr_blocks     = ["0.0.0.0/0"]
     description     = "SSH open"
     from_port       = 22
     protocol        = "tcp"
     to_port         = 22
-    security_groups = [aws_security_group.loadbalncer_security.id]
+    # security_groups = [aws_security_group.loadbalncer_security.id]
   }
 
   ingress {
@@ -30,13 +30,13 @@ resource "aws_security_group" "security_grp" {
     to_port         = 443
     security_groups = [aws_security_group.loadbalncer_security.id]
   }
-  ingress {
-    cidr_blocks = ["0.0.0.0/0"]
-    description = "Node open"
-    from_port   = 3000
-    protocol    = "tcp"
-    to_port     = 3000
-  }
+  # ingress {
+  #   cidr_blocks = ["0.0.0.0/0"]
+  #   description = "Node open"
+  #   from_port   = 3000
+  #   protocol    = "tcp"
+  #   to_port     = 3000
+  # }
 
   egress {
     cidr_blocks      = ["0.0.0.0/0"]
