@@ -6,6 +6,8 @@ resource "aws_autoscaling_group" "autoS-group" {
 
   min_size = var.min_sizeasg
 
+  name = "LaunchTemplated_created_by_Terraform"
+
   #   launch_configuration = aws_launch_configuration.autoScaling_launch_config.name
 
   launch_template {

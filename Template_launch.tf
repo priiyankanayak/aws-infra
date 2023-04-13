@@ -4,10 +4,12 @@ resource "aws_launch_template" "template_launch" {
 
 
   block_device_mappings {
-    device_name = "/dev/sdf"
+    device_name = "/dev/xvda"
 
     ebs {
       volume_size = var.volume_sizetl
+      encrypted = true
+      kms_key_id = aws_kms_key.key_ebs.arn
     }
 
   }
