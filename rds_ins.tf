@@ -31,6 +31,7 @@ resource "aws_db_instance" "mysql_database" {
   password             = var.password
   storage_type         = var.storage_type
   storage_encrypted    = var.storage_encrypted
+  kms_key_id = aws_kms_key.key_rds.arn
 
   skip_final_snapshot = var.skip_final_snapshot
 
