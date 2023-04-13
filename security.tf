@@ -3,14 +3,14 @@ resource "aws_security_group" "security_grp" {
   description = "Terraform security group"
   vpc_id      = aws_vpc.main.id
 
-  ingress {
-    cidr_blocks     = ["0.0.0.0/0"]
-    description     = "SSH open"
-    from_port       = 22
-    protocol        = "tcp"
-    to_port         = 22
-    # security_groups = [aws_security_group.loadbalncer_security.id]
-  }
+  # ingress {
+  #   cidr_blocks     = ["0.0.0.0/0"]
+  #   description     = "SSH open"
+  #   from_port       = 22
+  #   protocol        = "tcp"
+  #   to_port         = 22
+  #   # security_groups = [aws_security_group.loadbalncer_security.id]
+  # }
 
   ingress {
     # cidr_blocks     = ["0.0.0.0/0"]
